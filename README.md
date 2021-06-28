@@ -1,5 +1,5 @@
 # Car Configurator
-> Creator your own car configuration and also learn about the history of the brand.
+> Create your own car configuration.
 ## Table of Contents
 * [General Info](#general-information)
 * [Technologies Used](#technologies-used)
