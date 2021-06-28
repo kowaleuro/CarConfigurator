@@ -38,7 +38,9 @@ This project is a site, which enables you to make your own car configurations an
 
 
 ## Screenshots
-![Example screenshot](./img/screen1.png)
+![Example screenshot](./img/screen1.PNG)
+
+![Example screenshot](./img/screen2.PNG)
 
 
 ## Acknowledgements
