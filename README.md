@@ -44,6 +44,6 @@ This project is a site, which enables you to make your own car configurations an
 
 
 ## Acknowledgements
-- Project was created in cooperation with Wiktor Tekiela (githubLink) 
+- Project was created in cooperation with Wiktor Tekiela (https://github.com/abcdrefg) 
 - This project was inspired by the official site of ferrari "https://www.ferrari.com/en-PL"
 - This project was based on tutorials of Konrad Zaworski
