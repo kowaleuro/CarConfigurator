@@ -1,0 +1,12 @@
+body {
+	background-image: url("images/Roma/BackgroundRoma.JPG");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: 100% 110%;
+}
+
+#main {
+	background-color:rgba(255,255,255,0.7);
+	height: 100%;
+	
+}

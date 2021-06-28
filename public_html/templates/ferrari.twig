@@ -1,0 +1,241 @@
+{% extends "index.html.twig" %}
+
+{% block content %}
+
+
+<html>
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Strona studenta 402884</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<script type="text/javascript" src="images/ferrari/ferrariscript.js"></script>
+		<script type="text/javascript" src="images/ferrari/playersf.js"></script>
+		
+		<link rel="stylesheet" href="images/ferrari/stylesf.css">
+		
+		
+	</HEAD>	
+
+	<body>
+	<nav class="navbar fixed-top navbar-expand-sm navbar-dark" id="mynav">
+		<img src="logo.png" style="width:6%; min-width:100px;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left:65%">
+			<span class="navbar-toggler-icon"></span>
+			</button>
+		<h4 style="font-family: Courier New; Color: white;" id="fontNav">
+			 
+			<div class="collapse navbar-collapse" id="navbarNav" style="margin-left:0%">
+				<ul class="navbar-nav" id="menu-buttons">
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=main">Home</a>
+					</li>
+					{% if session.id is defined %}
+						<li class="nav-item active">
+							<a class="nav-link" href="?page=modele" id="ModelsNav">Modele</a>
+						</li>
+					{% endif%}
+					<li class="nav-item active">
+						<a class="nav-link" href="?page=historia">Historia</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="?page=ferrari">F1</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=lokalizacja">Lokalizacja</a>
+					</li>
+					{% if session.id is defined %}
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=profile">Profil</a>
+						</li>
+
+						<li class="nav-item active" onclick="form1.submit();">
+							<a class="nav-link" href="/?logout=1">Wyloguj</a>
+						</li>
+					{% endif%}
+						
+				</ul>
+				 
+			</div>
+		</h4>
+		</nav>
+		<div class="jumbotron">
+		<video autoplay muted loop id="myVideo">
+			<source src="images/ferrari/filmsf.mp4" type="video/mp4">
+		</video>
+		</div>
+		<div id="main-cont" class="container">
+			<div id="row1" class="row">
+				<div id="sf20" class="col-md-4">
+					<img src="images/ferrari/SF1000.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="sf15" class="col-md-4">
+					<img src="images/ferrari/f2015.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="sf7" class="col-md-4">
+					<img src="images/ferrari/f2007.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="row-sf7" class="col-md-8">
+					<center><h1 class="display-4">Oto ferrari F2007</h1>
+					<br><h2 class="lead">“Driving is the only thing I love about F1.” ~Kimi Raikkonen</h2></center>
+				</div>
+				<div id="row-sf15" class="col-md-8">
+					<center><h1 class="display-4">Ferrari SF15-T</h1>
+					<br><h2 class="lead">“The helmet has a special meaning for many drivers. How important is it to you? - It protects my head.” ~Kimi Raikkonen</h2></center>
+				</div>
+				<div id="row-sf20" class="col-md-8">
+					<center><h1 class="display-4">Ferrari SF1000</h1>
+					<br><h2 class="lead">“It is a dream since a child to drive for the red cars.” ~Charles Leclerc</h2></center>
+				</div>
+			</div>
+			<div id="row2" class="row" style="margin-top:3%">
+				<div id="sf14" class="col-md-4">
+					<img src="images/ferrari/SF14T.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="sf2" class="col-md-4" >
+					<img src="images/ferrari/f2002.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div  id="sf90"class="col-md-4" >
+					<img src="images/ferrari/f1990.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="row-sf90" class="col-md-8">
+					<center><h1 class="display-4">Ferrari Tipo 641</h1>
+					<br><h2 class="lead">“Some Italians are geniuses, but you have to find a balance.” ~Alain Prost</h2></center>
+				
+				</div>
+				<div id="row-sf2" class="col-md-8">
+					<center><h1 class="display-4">Ferrari F2002</h1>
+					<br><h2 class="lead">“I'm Michael Schumacher. I don't need to test my driving ability.” ~Michael Schumacher</h2></center>
+				</div>
+				<div id="row-sf14" class="col-md-8">
+					<center><h1 class="display-4">Ferrari F14 T</h1>
+					<br><h2 class="lead">“Ferrari gives you a special feeling.” ~Fernando Alonso</h2></center>
+				</div>
+			</div>
+			<div id="row3" class="row">
+				<div id="sf12" class="col-md-4" style = "margin-top:3%; margin-bottom:5%;">
+					<img src="images/ferrari/F2012.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="sf17" class="col-md-4" style = "margin-top:3%; margin-bottom:5%;">
+					<img src="images/ferrari/sf70h.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="sf18" class="col-md-4" style = "margin-top:3%; margin-bottom:5%;">
+					<img src="images/ferrari/sf18h.jpg" alt="sbam" width="100%" height="auto">
+				</div>
+				<div id="row-sf18" class="col-md-8" style = "margin-top:3%; margin-bottom:5%;">
+					<center><h1 class="display-4">Ferrari SF71H</h1>
+					<br><h2 class="lead">“We always kept believing in ourselves and our team and the car.” ~Sebastian Vettel</h2></center>
+					
+				</div>
+				<div id="row-sf17" class="col-md-8" style = "margin-top:3%; margin-bottom:5%;">
+					<center><h1 class="display-4">Ferrari SF70H</h1>
+					<br><h2 class="lead">“Never lift. Never stop believing.” ~Sebastian Vettel</h2></center>
+				
+				</div>
+				<div id="row-sf12" class="col-md-8" style = "margin-top:3%; margin-bottom:5%;">
+					<center><h1 class="display-4">Ferrari F2012</h1>
+					<br><h2 class="lead">“After your time passes at Ferrari, you may drive for another team, but you're always a Ferrari driver.” ~Felipe Massa</h2></center>
+				
+				</div>
+			</div>
+			   
+			<div id="sf7main" style="margin-bottom:3%;">
+				<h4 class="font-weight-light">Bolid Scuderia Ferrari F2007 jest bolidem przygotowanym przez stajnię z Maranello na sezon 2007. Kierowcami którzy zasiadali za sterami bolidu byli Felipe Massa oraz Kimi Raikkonen. Kimi Raikkonen przechodzący z zespołu Vodafone McLaren Mercedes zastąpił siedmiokrotnego misztrza świata, Michaela Schumarea. Samochód był napędzany jednostką o pojemności 2.4 litra oraz o ośmiu cylindrach w układzie V tak jak każdy ówczesny bolid.   
+				Jednostka ta napędzała również samochody Scuderii Toro Rosso (z włoskiego Scuderia RedBull) oraz Spyker F1 team. Już na testach samóchód oraz jednostka napędowa potwierdziły, że samochód będzie walczył o mistrzostwo z samochodami McLarena.
+				Z 17 wyścigów w sezonie zespół Ferrari wygrał aż 9 z nich z czego 6 wygrał Kimi a 3 Felipe Massa. Na koniec sezonu po dyskwalifikacji zespołu Mclarena, Ferrari wygrało mistrzostwo konstruktorów a Kimi Raikkonen wygrywając ostatni wyścig, został mistrzem świata wyprzedzając Lewisa Hamiltona oraz Fernando Alonso o zaledwie jeden punkt gdyż zdobył ich 110.
+				Kimi Raikkonen jest jak do tej pory ostatnim kierowcą który zdobył mistrzostwo w czerwonym kombinezonie.</h4>
+			</div>
+			<div id="sf90main" style="margin-bottom:3%;">
+				<h4 class="font-weight-light">Ferrari F1-90 inaczej Ferrari Tipo 641 był samochodem przygotowanym do walki o tytuł w sezonie 1990. Ferrari podeszło do konstrukcji bezkompromisowo. Przepisy pozwalały na montaż jednostek V12, V10 bądź V8 o pojemności 3.5 litra.
+					Ferrari do swojego samochodu przygotowało dwunastocylindrowy silnik w dwóch wersjach, 036 oraz 037. Silniki te kręciły się do zawrotnych 12750 obrotów na minutę generując przy tym dźwięk który powoduje u wielu gęsią skórkę oraz 680 koni mechanicznych. Kierowcy którym dane było kierować ten bolid podczas sezonu to Nigel Mansel oraz Alain Prost. Był to jeden z najmocniejszych składów w historii. Nigel Mansell w 1992 roku zdobył mistrzostwo natomiast Alain Prost na tamten moment był trzykrotnym mistrzem świata.
+					W 1993 roku zdobył swój czwarty tytuł. Tipo 641 prowadzili kierowcy którzy na dzień dzisiejszy są mistrzami i mają łącznie 5 tytułów mistrzowskich. Jednak pomimo tak mocnego składu oraz świetnego bolidu nie wszystko poszło po myśli ludzi z Maranello. McLaren ,którego na torze reprezentowali Ayrton Senna ,uważany za jednego z najlepszych kierowców w historii oraz trzykrotny mistrz świata, oraz Gerhard Berger, przygotował świetne nadwozie dla idealnego silnika w tamtych latach skontruowanego przez inżynierów z Hondy.
+					Mowa o dziesięciocylindrowym RA109E który generował 675-690 koni mechanicznych w zależności od specyfikacji oraz który był lżejszą jednostką od dwunastocylindrowej jednostki z stajni czerwonych. Różnice te spowodwały że Alain Prost wygrał 6 wyścigów z 16 zdobywając łącznie w sezonie 73 punkty a Ayrton Senna zdobył tych punktów 78 również wygrywając 6 wyścigów. Warto zaznaczyć że walka toczyła się do ostatniego wyścigu a podczas GP Japoni Ayrton Senna doprowadził do wypadku z Alainem Prostem co przeważyło o mistrzostwie.
+					<br>
+					
+				</h4>
+			</div>
+			<div id="audioV12div" style="margin-top:3%; margin-bottom:3%;">
+					<center>
+						<button id="V12play" type="button" class="btn btn-outline-secondary">Dźwięk Tipo 641 V12</button>
+						<audio id="audioV12" src="images/ferrari/3.5tipo641.mp3">></audio>
+					</center>
+			</div>
+			<div id="sf18main" style="margin-bottom:3%;">
+				<h4 class="font-weight-light">
+					Ferrari SF71H było bolidem przygotowanym na sezon 2018. W skład kierowców wchodził 4-krotny mistrz świata Sebastian Vettel oraz mistrz świata Kimi Raikkonen. Samochód był ewolucją samochodu z 2017 roku. Napędzany zespołem hybrydowym samochód walczył z ówczesną konstrukcją zespołu Mercedesa.
+					Jak się okazało na początku sezonu, Bolid Scuderii był bardzo szybki gdyż Sebastian Vettel wygrał nim dwa inauguracyjne wyścigi niestety Ferrari nie było w stanie utrzymać tempa przez cały sezon co poskutkowały tym że stracili prowadzenie w obu klasyfikacjach. Mistrzem świata został Lewis Hamilton z zespołu Mercedes. Drugą lokatę zajął Sebastian Vettel a trzecią Kimi Raikkonen jednak ich łączna zdobycz punktowa nie wystarczyła do wygrania w klasyfikacji konstruktorów.
+				</h4>
+			</div>
+			
+			<div id="sf17main">
+				<h4 class="font-weight-light">
+					Ferrari SF70H. Był jedną z trzech największych szans i nadzei na mistrzostwo od 2008 roku. Po 3 latach inżynierowie z Maranello dopracowali jednostkę napędową na tyle że mogła ona konkurować z zespołem napędowym stworzonym przez Mercedesa. Po odejściu Nico Rosberga z Mercedesa, Scuderia Ferrari posiadała najmocniejszy skład kierowców. Sebastian Vettel w swojej najwyższej formie i doświadczony Kimi Raikkonen.
+					Zespół Ferrari dominował od początku sezonu budując przewagę nad Mercedesem. Niestety Ferrari dręczyły awarie jednostki napędowej.  
+				</h4>
+			</div>
+			<div id="sf17main2" class="row" style="margin-bottom:3%">
+				<div id="sf17main2novid"class="col-md-4"><h4 class="font-weight-light">Przez kary nakładane przez sędziów tracili oni wiele pozycji i wiele punktów. Zespół Mercedesa okazał się mniej awaryjny co dało im przewagę. O wszystkim zadecydowało Grand Prix Singapuru gdzie na starcie Max Verstappen uderzył w bok Kimiego Raikkonena a ten uderzył prowadzącego Sebastiana Vettela co przekreśliło walkę o mistrzostwo.</h4></div>
+				<div class="col-md-8" id="player"></div>
+			</div>
+			<div id="sf2main" style="margin-bottom:3%">
+				<h4 class="font-weight-light">
+					Sezon 2002 był kontynuacją zwycięstw Scuderii Ferrari. Od 2000 roku Ferrari dominowało w stawce ale to sezon 2002 był tym najlepszym. Michael Schumacher oraz Rubens Barrichello wygrali samochodem F2002 15 z 17 wyścigów! Jak dotąd w jednym sezonie tylko McLaren wygrał 15 wyścigów. Michael Schumacher zdominował całą stawkę i w raz z Rubensem zdobył mistrzostwo świata konstruktorów a sam Michael został mistrzem świata. 
+			
+				</h4>
+			</div>
+			<div id="sf15main" style="margin-bottom:3%">
+				<h4 class="font-weight-light">
+					Ferrari po nieudanym sezonie 2014 i opuszczeniu ekipy przez Fernando Alonso, zaczęło odbudowywać się i tak oto stworzyło SF15-T. Była to jednostka może nie aż tak konkurencyjna jak samochód Mercedesa ale dla stajni z Maranello był to dużo krok w przód. Kierowcą który zastąpił dwukrotnego mistrza świata był Sebastian Vettel, 4 krotny mistrz świata. 
+					Ferrari było jedynym zespołem w tamtym sezonie który mógł konkurować z mercedesem. Sebastian Vettel zgromadził aż 278 punktów co dało mu 3 lokatę w klasyfikacji generalnej. Tylko 44 punkty więcej miał Nico Rosberg z Mercedesa.
+				</h4>
+			</div>
+			<div id="sf14main" style="margin-bottom:3%">
+				<h4 class="font-weight-light">
+					Scuderia Ferrari inwestując wszystkie siły w sezony 2012 oraz 2013 nie była zbyt dobrze przygotowana na zmianę przepisów. Silnik Ferrari 059/3 był jednostką wyraźnie słabszą od silnika Mercedesa. Sama konstrukcja nie dawała możliwości walki z RedBullem, Mercedesem a nawet Williamsem. Fernando Alonso zdobył dwa podia natomiast Kimi, drugi kierowca Ferrari w roku 2014, nie zdobył żadnego. Łącznie konstrukcja zajęła 4 miesjca w klasyfikacji konstruktorów.
+				
+				</h4>
+			</div>
+			<div id="sf20main" style="margin-bottom:3%">
+				<h4 class="font-weight-light">
+					Sezon dla zespołu z Maranello nie zapowiadał się dobrze. Już na testach wyraźnie było widać, że jednostka 1.6 V6H wyraźnie jest słabsza przez restrykcje nałożone na Ferrari przez FIA. Przez jednostkę napędową Ferrari wyraźnie odstawało nie tylko od swoich rywali ale również od innych słabszych zespołów. Charles Leclerc oraz Sebastian Vettel zdobyli dopiero szóstą lokatę w klasyfikacji konstruktorów.
+				
+				
+				</h4>
+			</div>
+			<div id="sf12main" >
+				<h4 class="font-weight-light">
+					Zgodnie z przepisami obowiązującymi w sezonie 2012 nakazującymi umieszczenie końcówki nosa nie wyżej niż na wysokości 550 mm na nosie F2012 znalazł się charakterystyczny stopień. Przednie zawieszenie typu pull-rod zastosowane w Ferrari było ostatni raz wykorzystywane w Formule 1 w 2001 roku i początkowo sprawiało liczne problemy, zwłaszcza z balansem, jednak ostatecznie przyniosło korzyści aerodynamiczne. W trakcie sezonu przeprojektowano wydech na wzór bolidu Sauber C31 wykorzystujący efekt Coanda, pozwalający doprowadzić gazy spalinowe do dyfuzora co zwiększało docisk aerodynamiczny generowany przez ten element.
+					
+					
+				</h4>
+			
+			</div>
+			
+			<div id="fasf12" class="container">
+				<img id="pho1" class="figure-img img-fluid rounded" src="images/ferrari/alonso.jpg" alt>
+					<div id="cap1" class="p-5">
+						<h4 class="font-weight-light">
+							Fernando Alonso był głównym pretendentem do walki o mistrzostwo w stajni z Maranello. Był on jedyną osobą która była w stanie do ostatniego wyścigu walczyć o mistrzostwo z Sebastianem Vettelemem z zespołu Redbulla 
+						</h4>
+					</div>	
+			</div>
+			<div id="tabsf12" style="position:relative; margin-top:50%;margin-bottom:90%">
+				<img id="pho2" class="figure-img img-fluid rounded" src="images/ferrari/2012stand.jpg" alt>
+					<div id="cap2" class="p-5">
+						<h4 class="font-weight-light">
+							Niesty pomimo wypadku z nie jego winy podczas GP Belgii oraz pomimo wielu świetnych wyścigów przegrał mistrzostwo o zaledwie 3 punkty. Ferrari w 2012 roku jak do tej pory było najbliżej zdobycia tytułu od 2008 roku.
+						</h4>
+					</div>
+			</div>
+			
+			
+		</div>
+	
+	
+	
+	</body>
+</html>
+{% endblock %}

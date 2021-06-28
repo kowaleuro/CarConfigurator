@@ -1,0 +1,154 @@
+{% extends "index.html.twig" %}
+
+{% block content %}
+    <head>
+        <meta charset="utf-8">
+        <TITLE>Strona studenta 402884</TITLE>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <link rel="stylesheet" href="">
+        <script type="text/javascript" src="history.js"></script>
+    </head>
+    <br>
+    <div class="container">
+        <div class="row">
+            <nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark" id="mynav">
+                <img src="logo.png" style="width:6%; min-width:100px;">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left:65%">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <h4 style="font-family: Courier New; Color: white;" id="fontNav">
+
+                    <div class="collapse navbar-collapse" id="navbarNav" style="margin-left:0%">
+                        <ul class="navbar-nav" id="menu-buttons">
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/?page=main">Home</a>
+                            </li>
+                            {% if session.id is defined %}
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/?page=modele" id="ModelsNav">Modele</a>
+                                </li>
+                            {% endif%}
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/?page=historia">Historia</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="?page=ferrari">F1</a>
+                            </li>
+                            <li class="nav-item active">
+                                <a class="nav-link" href="/?page=lokalizacja">Lokalizacja</a>
+                            </li>
+                            {% if session.id is defined %}
+                                <li class="nav-item active">
+                                    <a class="nav-link" href="/?page=profile">Profil</a>
+                                </li>
+
+                                <li class="nav-item active" onclick="form1.submit();">
+                                    <a class="nav-link" href="/?logout=1">Wyloguj</a>
+                                </li>
+                            {% endif%}
+
+                        </ul>
+
+                    </div>
+                </h4>
+            </nav>
+        </div>
+
+
+            <div class="container">
+
+                {% if verification() %}
+                    {% block configuration %}
+
+                    {% endblock %}
+                {% else %}
+                <div class="card bg-dark" style="margin-bottom: 5%; margin-top: 10%">
+                    <div class="card-header">
+                        <p style="font-family: Courier New; Color: white;">Konfiguracje</p>
+                    </div>
+                    <div class="card-body ">
+                        <table class="table table-dark table-striped" id="moja-tabela">
+                            <thead>
+                            <tr>
+                                <th scope="col"><p style="font-family: Courier New; Color: white;">ID</p></th>
+                                <th scope="col"><p style="font-family: Courier New; Color: white;">Model</p></th>
+                                <th scope="col"><p style="font-family: Courier New; Color: white;">Podgląd</p></th>
+                            </tr>
+                            </thead>
+                            <tbody>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                    var stuff = {{ list()|raw }};
+                    console.log(stuff);
+                    var tablica_json = JSON.parse(stuff);
+
+
+
+                    var table_count = 5;
+                    jQuery.each(tablica_json, function(){
+                        table_count = table_count + 1;
+                        var moja_tabela = document.getElementById("moja-tabela");
+                        var moja_tabela_tbody = moja_tabela.getElementsByTagName('tbody')[0];
+                        var trka = document.createElement("tr");
+                        var td1 = document.createElement("td");
+                        var td2 = document.createElement("td");
+
+                        var td4 = document.createElement("td");
+
+                        var pi1 = document.createElement("p");
+                        pi1.style.fontFamily = "Courier New";
+                        pi1.style.Color = "white";
+
+                        var pi2 = document.createElement("p");
+                        pi2.style.fontFamily = "Courier New";
+                        pi2.style.Color = "white";
+
+                        var pi4 = document.createElement("p");
+                        pi4.style.fontFamily = "Courier New";
+                        pi4.style.Color = "white";
+
+                        td2.appendChild(pi2);
+                        td1.appendChild(pi1);
+                        td4.appendChild(pi4);
+
+                        var a = document.createElement("a");
+                        var wcisk = document.createElement("button");
+                        a.setAttribute('href',('/?page=config&show=' + this.id));
+
+                        wcisk.setAttribute('type', 'button');
+                        wcisk.setAttribute('class', 'btn btn-light');
+                        wcisk.setAttribute('id' , 'But' + table_count);
+                        wcisk.textContent = 'pokaż';
+
+                        if ( (table_count % 2) == 1 ){
+                            trka.setAttribute('class', "klasa-testowa");
+                        }
+                        trka.setAttribute('id', 'tr' + table_count);
+                        pi1.innerHTML = this.id;
+                        pi2.innerHTML = this.model;
+
+                        a.appendChild(wcisk);
+                        pi4.appendChild(a);
+                        trka.appendChild(td1);
+                        trka.appendChild(td2);
+                        trka.appendChild(td4);
+                        moja_tabela_tbody.appendChild(trka);
+
+                    })
+            </script>
+        </div>
+    {% endif %}
+    </div>
+    </body>
+
+{% endblock %}

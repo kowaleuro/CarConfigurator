@@ -1,0 +1,68 @@
+#myVideo {
+			
+	position: absolute;
+	height: auto;
+	width: auto;
+	min-height: 100%;
+	min-width: 100%;
+	left: 50%;
+	top: 50%;
+	-webkit-transform: translate3d(-50%, -50%, 0);
+	transform: translate3d(-50%, -50%, 0);
+	z-index: 1;	
+}
+.jumbotron{
+	position: relative;
+	z-index: -101;
+	overflow: hidden;
+	height: 50%;
+}
+
+#fasf12{
+	position: relative;
+	margin-top: 5%;
+	margin-bottom:5%;	
+}
+
+#cap1{
+	position:absolute;
+	background: rgba(220,220,220,0.9);
+	width:50%;
+	z-index:0;
+	border-radius: 25px;
+	left: 10%;
+	margin-top: 6%;
+}
+#pho1{
+	position:absolute;
+	width:50%;
+	left:50%;
+	z-index:-1;
+	
+	
+}
+#cap2{
+	position:absolute;
+	background: rgba(220,220,220,0.9);
+	width:50%;
+	margin-top: 4%;
+	border-radius: 25px;
+	left: 25%;
+	
+}
+#pho2{	
+	position:absolute;
+	z-index:-1;	
+	margin-bottom:10%;
+}
+
+
+.nav-colored {
+  background-color: #000;
+  transition: background-color 900ms linear;
+}
+
+.nav-transparent { 
+  background-color:transparent;
+  transition: background-color 900ms linear;
+}

@@ -1,0 +1,156 @@
+{% extends "index.html.twig" %}
+
+{% block content %}
+<html>
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Strona studenta 402884</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="SF90.css">
+		<script>
+		function preLoad() {
+		a1 = new Image; a1.src = 'images/SF90/SF90interior1.JPG';
+		a2 = new Image; a2.src = 'images/SF90/SF90interior2.JPG';
+		b3 = new Image; b3.src = 'images/SF90/SF90brakepads2.JPG';
+		b4 = new Image; b4.src = 'images/SF90/SF90brakepads1.JPG';
+		c5 = new Image; c5.src = 'images/SF90/SF90red.JPG';
+		c6 = new Image; c6.src = 'images/SF90/SF90yellow.JPG';
+		d7 = new Image; d7.src = 'images/SF90/SF90carbon.JPG';
+		d8 = new Image; d8.src = 'images/SF90/SF90metal.JPG';
+		}
+		function im(image) {
+			document.getElementById(image[0]).src = eval(image + ".src")
+		}
+		function im2(image) {
+			document.getElementById(image[0]).src = eval(image + ".src")
+		}
+		function im3(image) {
+			document.getElementById(image[0]).src = eval(image + ".src")
+		}
+		function im4(image) {
+			document.getElementById(image[0]).src = eval(image + ".src")
+		}
+	 </script>
+	</HEAD>	
+	<body onLoad="preLoad()">
+		<nav class="navbar fixed-top navbar-expand-sm navbar-dark" id="mynav">
+			<img src="logo.png" style="width:6%; min-width:100px;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left:65%">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+		<h4 style="font-family: Courier New; Color: white;" id="fontNav">
+		<a class="navbar-brand" href="#"></a>	 
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav" id="menu-buttons">
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=main">Home</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="#" id="ModelsNav">Modele</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=historia">Historia</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=ferrari">F1</a>
+					</li>
+					<li class="nav-item active">
+						<a class="nav-link" href="/?page=lokalizacja">Lokalizacja</a>
+					</li>
+					{% if session.id is defined %}
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=profile">Profil</a>
+						</li>
+
+						<li class="nav-item active" onclick="form1.submit();">
+							<a class="nav-link" href="/?logout=1">Wyloguj</a>
+						</li>
+					{% endif%}
+				</ul> 
+			</div>
+		</h4>
+		</nav>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-7">
+				</div>
+				<div class="col-md-5" id="main">
+					<center>
+					<h1 style="font-family: Courier New; margin-top:10%;"> 
+						Konfigurator
+					</center>
+					<form action="" method="POST">
+						<h2 style="font-family: Courier New; margin-top:10%;"><center>Kolor Samochodu</center></h2>
+						<center><img id="c" src="images/SF90/SF90red.JPG" width="50%" height="auto" alt="" style="margin-top:3%"></center>
+						<center><br>
+						<div class="custom-control custom-radio custom-control-inline" style="margin-top:5%">	
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline6" name="customRadioInline3" class="custom-control-input" onClick="im3('c5');" checked="checked" value="Rosso Corsa">
+							<label class="custom-control-label" for="customRadioInline6">Rosso Corsa</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline5" name="customRadioInline3" class="custom-control-input" onClick="im3('c6');" value="Giallo Modena">
+							<label class="custom-control-label" for="customRadioInline5">Giallo Modena</label>
+						</div>
+						<h2 style="font-family: Courier New; margin-top:10%;"><center>Kolor Foteli</center></h2>
+						<center><img id="a" src="images/SF90/SF90interior1.JPG" width="50%" height="auto" alt="" style="margin-top:3%"></center>
+						<center><br>
+						<div class="custom-control custom-radio custom-control-inline" style="margin-top:5%">	
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input" onClick="im('a1');" checked="checked" value="Nero">
+							<label class="custom-control-label" for="customRadioInline1">Nero</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input" onClick="im('a2');" value="Terra Bruciata">
+							<label class="custom-control-label" for="customRadioInline2">Terra Bruciata</label>
+						</div>
+						<br>
+						<h2 style="font-family: Courier New; margin-top:10%;"><center>Kolor Zacisków</center></h2>
+						<center><img id="b" src="images/SF90/SF90brakepads2.JPG" width="50%" height="auto" alt="" style="margin-top:3%"></center>
+						<center><br>
+						<div class="custom-control custom-radio custom-control-inline" style="margin-top:5%">	
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline3" name="customRadioInline2" class="custom-control-input" onClick="im2('b3');" checked="checked" value="Czerwone Zaciski">
+							<label class="custom-control-label" for="customRadioInline3">Czerwone Zaciski</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline4" name="customRadioInline2" class="custom-control-input" onClick="im2('b4');" value="Żółte zaciski">
+							<label class="custom-control-label" for="customRadioInline4">Żółte Zaciski</label>
+						</div>
+						<h2 style="font-family: Courier New; margin-top:10%;"><center>Wstawki</center></h2>
+						<center><img id="d" src="images/SF90/SF90carbon.JPG" width="50%" height="auto" alt="" style="margin-top:3%"></center>
+						<center><br>
+						<div class="custom-control custom-radio custom-control-inline" style="margin-top:5%">	
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline7" name="customRadioInline4" class="custom-control-input" onClick="im4('d7');" checked="checked" value="Karbonowe">
+							<label class="custom-control-label" for="customRadioInline7">Karbonowe</label>
+						</div>
+						<div class="custom-control custom-radio custom-control-inline">
+							<h3 style="font-family: Courier New; Color: black;">
+							<input type="radio" id="customRadioInline8" name="customRadioInline4" class="custom-control-input" onClick="im4('d8');" value="Metalowe">
+							<label class="custom-control-label" for="customRadioInline8">Metalowe</label>
+						</div>
+						
+						</center>
+						<center><button type="submit" class="btn" and style="background-color:transparent;margin-top:5%;"><h2 style="font-family: Courier New; Color: black;">Zapisz konfigurację</h2></button>
+					</form>
+				</div>
+			
+			
+			</div>
+		</div>
+	
+	
+	</body>
+	{% if post.customRadioInline3 is defined %}
+		{{ config()}}
+	{% endif %}
+</html>
+{% endblock %}

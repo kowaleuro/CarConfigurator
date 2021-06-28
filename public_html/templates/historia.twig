@@ -1,0 +1,187 @@
+<html>
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Strona studenta 402884</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="">
+		<script type="text/javascript" src="history.js"></script>
+		
+		
+	</HEAD>	
+	<body>
+		<style>
+
+		.test {
+			position: absolute;
+			
+		}
+		</style>
+		<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+			<img src="logo.png" style="width:6%; min-width:100px;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left:65%">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<h4 style="font-family: Courier New; Color: white;" id="fontNav">
+				<a class="navbar-brand" href="#"></a>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav" id="menu-buttons">
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=main">Home</a>
+						</li>
+						{% if session.id is defined %}
+							<li class="nav-item active">
+								<a class="nav-link" href="?page=modele" id="ModelsNav">Modele</a>
+							</li>
+						{% endif%}
+						<li class="nav-item active">
+							<a class="nav-link" href="#">Historia</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="?page=ferrari">F1</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="?page=lokalizacja">Lokalizacja</a>
+						</li>
+						{% if session.id is defined %}
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=profile">Profil</a>
+						</li>
+
+						<li class="nav-item active" onclick="form1.submit();">
+							<a class="nav-link" href="/?logout=1">Wyloguj</a>
+						</li>
+						{% endif%}
+					</ul>
+				</div>
+			</h4>
+		</nav>
+		<div class="jumbotron" style="margin-top:5%;background-color:black">
+			<h1 id="open1" style="font-family: Courier New; Color: white;">Ferrari</h1>
+			<br>
+			<h3 id="open2" style="font-family: Courier New; Color: white;">Ikona sportu, ikona motoryzacji.<h3>
+			<hr style="font-family: Courier New; Color: white;">
+			<h3 id="open3"style="font-family: Courier New; Color: white;">Od 1938 roku tworzymy historię.</h3>
+			
+		</div>
+		<div class="container" id="whole" style="width:50%">
+			<div class="row" id="scroll-image">
+				<center>
+				<img src="images/history/1251.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1252.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1253.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1254.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1255.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1256.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1257.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1258.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				<img src="images/history/1259.JPG" id="photo1" style="width:50%;height:auto" class="test">
+				</center>
+			</div>
+		</div>
+		<div class="container-fluid" style="margin-top:30%;">
+		<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+			<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img class="d-block w-100" src="images/history/250gto.JPG" alt="First slide">
+		</div>
+		<div class="carousel-item">
+			<img class="d-block w-100" src="images/history/F40.JPG" alt="Second slide">
+		</div>
+		<div class="carousel-item">
+		<img class="d-block w-100" src="images/history/Enzo.JPG" alt="Third slide">
+		</div>
+		</div>
+  <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+</div>
+		
+		
+		
+		
+		
+	<script>
+    window.onload = function() {
+  
+     
+        var imageIndex = 0;
+  
+    
+        var images =
+            document.getElementsByClassName('test');
+  
+        var isMouseOverImage = false;
+  
+        var scrollImages =
+            document.getElementById('scroll-image');
+  
+  
+        var x, y;
+  
+        function noScroll() {
+            window.scrollTo(x, y);
+        }
+  
+      
+        scrollImages.addEventListener(
+                "mouseenter", function() {
+  
+           
+            x = window.pageXOffset;
+            y = window.pageYOffset;
+  
+   
+            window.addEventListener("scroll", noScroll);
+        
+            isMouseOverImage = true;
+        });
+  
+        scrollImages.addEventListener(
+                "mouseleave", function() {
+  
+            isMouseOverImage = false;
+  
+        
+            window.removeEventListener(
+                        "scroll", noScroll);
+        });
+  
+   
+        scrollImages.addEventListener(
+                    "wheel", function(e) {
+                             
+        
+            if (isMouseOverImage) {
+                var nextImageIndex;
+  
+       
+                if (e.deltaY > 0)
+                    nextImageIndex = (imageIndex + 1)
+                                     % images.length;
+                else
+                    nextImageIndex =
+                            (imageIndex - 1
+                            + images.length)
+                            % images.length;
+  
+               
+                images[imageIndex].style.zIndex = "0";
+            
+                images[nextImageIndex].style.zIndex = "1";
+                imageIndex = nextImageIndex;
+            }
+        });
+    }
+	</script>
+	</body>
+</html>

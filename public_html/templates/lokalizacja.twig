@@ -1,0 +1,98 @@
+<html>
+	<HEAD>
+		<meta charset="utf-8">
+		<TITLE>Strona studenta 402884</TITLE>
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+		<link rel="stylesheet" href="">
+		
+		
+		
+	</HEAD>	
+	<body style="background-color:gray;">
+
+	<div class="row">
+		<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark" id="mynav">
+			<img src="logo.png" style="width:6%; min-width:100px;">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="margin-left:65%">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+			<h4 style="font-family: Courier New; Color: white;" id="fontNav">
+
+				<div class="collapse navbar-collapse" id="navbarNav" style="margin-left:0%">
+					<ul class="navbar-nav" id="menu-buttons">
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=main">Home</a>
+						</li>
+						{% if session.id is defined %}
+							<li class="nav-item active">
+								<a class="nav-link" href="/?page=modele" id="ModelsNav">Modele</a>
+							</li>
+						{% endif%}
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=historia">Historia</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="?page=ferrari">F1</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="/?page=lokalizacja">Lokalizacja</a>
+						</li>
+						{% if session.id is defined %}
+							<li class="nav-item active">
+								<a class="nav-link" href="/?page=profile">Profil</a>
+							</li>
+
+							<li class="nav-item active" onclick="form1.submit();">
+								<a class="nav-link" href="/?logout=1">Wyloguj</a>
+							</li>
+						{% endif%}
+
+					</ul>
+
+				</div>
+			</h4>
+		</nav>
+	</div>
+		<div class="jumbotron" style="margin-top:3%;">
+			<center><h1 id="open1" style="font-family: Courier New; Color:lead;">Lokalizacja</h1>
+			<br>
+			<div class="container">
+			<h3 id="open2" style="font-family: Courier New; Color: lead;">W celu sprawdzenia danej konfiguracji oraz omówienia jej z sprzedawcą, odwiedź jeden z naszych dwóch salonów w polsce.<h3>
+			</div>
+			
+			
+		</div>
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-6">
+				<h2 id="open2" style="font-family: Courier New; Color: lead;margin-top:4%;"><center>
+					ul. Bocheńskiego 109<br>
+					40-816 Katowice Poland<br>
+					GEO: 18.983767, 50.256076<br>
+					Telefon: +48327973434<br>
+					Fax: +48327973436<br>
+				</div>
+				<div class="col-md-6">
+					<img src="images/lokalizacja/katowiceNocą.jpg" style="width:55%;height:auto" >
+				</div>
+			</div>
+			<div class="row" style="margin-top:4%;">
+			<div class="col-md-6">
+				<h2 id="open2" style="font-family: Courier New; Color: lead;margin-top:4%;"><center>
+					<img src="images/lokalizacja/wuwuwuwua.jpg" style="width:55%;height:auto" >
+					<br><br><br><br>
+				</div>
+				<div class="col-md-6">
+					<h2 id="open2" style="font-family: Courier New; Color: lead;margin-top:10%;margin-right:50%"><center>
+					ul. Wirażowa 21<br>
+					02-158 Warszawa<br>
+					info@ferrariwarszawa.com<br>
+					Telefon: +48 (22) 627 76 70<br>
+				</div>
+			
+	</body>
+</html>
