@@ -33,14 +33,14 @@ This project is a site, which enables you to make your own car configurations an
 - possibility to see every single configuration created by you
 - many animations
 - registering and loging
-- many video's
+- many videos
 
 
 
 ## Screenshots
-![Example screenshot](./img/screen1.PNG)
-
 ![Example screenshot](./img/screen2.PNG)
+
+![Example screenshot](./img/screen1.PNG)
 
 
 ## Acknowledgements
