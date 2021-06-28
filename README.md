@@ -5,7 +5,6 @@
 * [Technologies Used](#technologies-used)
 * [Features](#features)
 * [Screenshots](#screenshots)
-* [Setup](#setup)
 * [Acknowledgements](#acknowledgements)
 
 
@@ -45,3 +44,4 @@ This project is a site, which enables you to make your own car configurations an
 ## Acknowledgements
 - Project was created in cooperation with Wiktor Tekiela (githubLink) 
 - This project was inspired by the official site of ferrari "https://www.ferrari.com/en-PL"
+- This project was based on tutorials of Konrad Zaworski
